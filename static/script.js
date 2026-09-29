@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContainer = document.querySelector("main");
 
   // Obtener las películas
-  fetch("http://localhost:1234/movies")
+  fetch("https://node-rest-api-dual-db.onrender.com/movies")
     .then((res) => res.json())
     .then((movies) => {
       // Generar el HTML
