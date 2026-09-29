@@ -1,0 +1,104 @@
+/* Configuración del Scrollbar color Verde Pistache */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #93c572; /* Verde pistache */
+  border-radius: 10px;
+  border: 3px solid #121212;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7ab059;
+}
+
+/* Estilos Globales */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Fondo oscuro tipo gradiente */
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Efecto Glassmorphism (Blur y Transparencia) para las tarjetas */
+article {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  opacity: 0; /* Inicialmente oculto para Anime.js */
+}
+
+/* Efecto Hover atractivo */
+article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(147, 197, 114, 0.4); /* Brillo verde pistache */
+  border-color: rgba(147, 197, 114, 0.5);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+img {
+  border-radius: 12px;
+  height: auto;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón con diseño transparente y hover */
+button.delete {
+  background: transparent;
+  color: #93c572; /* Verde pistache */
+  border: 2px solid #93c572;
+  padding: 0.6rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.delete:hover {
+  background: #93c572;
+  color: #121212;
+  box-shadow: 0 0 15px #93c572;
+  transform: scale(1.05);
+}
